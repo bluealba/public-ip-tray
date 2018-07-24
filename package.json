@@ -1,0 +1,40 @@
+{
+  "name": "public-ip-tray",
+  "version": "1.0.0",
+  "description": "Shows Public IP Address in your System Tray",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": {
+    "name": "Blue Alba",
+    "email": "info@bluealba.com"
+  },
+  "license": "MIT",
+  "build": {
+    "appId": "com.bluealba.public-ip-tray",
+    "productName": "Public IP Tray",
+    "copyright": "Copyright © 2018 ${author}",
+    "extraFiles": [
+      {
+        "from": "assets",
+        "to": "resources",
+        "filter": [ "**/*" ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg",
+      "icon": "build/icon.png"
+    }
+  },
+  "dependencies": {
+    "electron-fetch": "^1.2.1"
+  },
+  "devDependencies": {
+    "electron": "^2.0.5",
+    "electron-builder": "^20.24.4"
+  }
+}
